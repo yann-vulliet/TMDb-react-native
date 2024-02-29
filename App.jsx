@@ -2,7 +2,7 @@ import React from 'react';
 import Search from './component/Search'
 import Banner from './assets/Banner.png'
 import Footer from './assets/footer.jpg'
-import { Image, StyleSheet, View } from 'react-native';
+import { Image, StyleSheet, View, TouchableOpacity } from 'react-native';
 
 export default function App() {
   return (
@@ -12,7 +12,9 @@ export default function App() {
         <View style={styles.search} >
           <Search />
         </View>
-        <Image style={styles.footer} source={Footer} />
+        <TouchableOpacity onPress={prevState => !prevState}>
+          <Image style={styles.footer} source={Footer} />
+        </TouchableOpacity>
       </View>
     </>
   );
